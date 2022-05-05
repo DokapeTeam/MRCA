@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:getx_flutter_project_template/bindings/home_binding.dart';
-import 'package:getx_flutter_project_template/bindings/sign_in_binding.dart';
+import 'package:getx_flutter_project_template/bindings/home_bindings.dart';
+import 'package:getx_flutter_project_template/bindings/sign_in_bindings.dart';
 import 'package:getx_flutter_project_template/middlewares/auth_guard.dart';
 import 'package:getx_flutter_project_template/views/home/home.dart';
 
