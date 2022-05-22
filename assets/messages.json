@@ -1,0 +1,74 @@
+[
+  {
+    "author": {
+      "firstName": "Tay",
+      "id": "06c33e8b-e835-4736-80f4-63f44b66666c",
+      "imageUrl": "https://avatars.githubusercontent.com/u/33809426?v=4"
+    },
+    "createdAt": 1598438792000,
+    "id": "0371b8f4-314a-448e-85ba-9c7dc5ed7a1e",
+    "status": "seen",
+    "text": ":))))",
+    "type": "text"
+  },
+  {
+    "author": {
+      "firstName": "Ben",
+      "id": "b4878b96-efbc-479a-8291-474ef323dec7",
+      "imageUrl": "https://i.imgur.com/3oV9g6t.jpg"
+    },
+    "createdAt": 1598438791000,
+    "id": "db334c22-1fc4-4951-86b2-1eb7f7262743",
+    "status": "seen",
+    "text": "Sợ quá cơ :3",
+    "type": "text"
+  },
+  {
+    "author": {
+      "firstName": "Tay",
+      "id": "06c33e8b-e835-4736-80f4-63f44b66666c",
+      "imageUrl": "https://avatars.githubusercontent.com/u/33809426?v=4"
+    },
+    "createdAt": 1598438790000,
+    "id": "f61a1924-e043-409f-9051-78ebfc68507a",
+    "status": "seen",
+    "text": "T kêu Đỗ Đức Phú đánh m đấy",
+    "type": "text"
+  },
+  {
+    "author": {
+      "firstName": "Tay",
+      "id": "06c33e8b-e835-4736-80f4-63f44b66666c",
+      "imageUrl": "https://avatars.githubusercontent.com/u/33809426?v=4"
+    },
+    "createdAt": 1598438789000,
+    "id": "d46ffcb1-9340-4c60-8b8c-c9d17539b0c7",
+    "status": "seen",
+    "text": "Đập chết m h",
+    "type": "text"
+  },
+  {
+    "author": {
+      "firstName": "Ben",
+      "id": "b4878b96-efbc-479a-8291-474ef323dec7",
+      "imageUrl": "https://i.imgur.com/3oV9g6t.jpg"
+    },
+    "createdAt": 1598438788000,
+    "id": "b23e5907-6d8b-4134-8cf3-c6dd34fc42d2",
+    "status": "seen",
+    "text": "cc",
+    "type": "text"
+  },
+  {
+    "author": {
+      "firstName": "Tay",
+      "id": "06c33e8b-e835-4736-80f4-63f44b66666c",
+      "imageUrl": "https://avatars.githubusercontent.com/u/33809426?v=4"
+    },
+    "createdAt": 1653130968,
+    "id": "83093c75-2efb-47bc-84d6-37dbc53bb5de",
+    "status": "seen",
+    "text": "Alo, Trả nợ cho tao m",
+    "type": "text"
+  }
+]

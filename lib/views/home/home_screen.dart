@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_flutter_project_template/navigation/app_pages.dart';
+import 'package:getx_flutter_project_template/views/home/components/chat_item.dart';
 import 'package:getx_flutter_project_template/views/home/home_controller.dart';
+
+import '../../navigation/app_pages.dart';
 
 class Home extends GetView<HomeController> {
   const Home({Key? key}) : super(key: key);
@@ -9,29 +11,20 @@ class Home extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Center(
-            child: Text('Give me rent'),
-          ),
-          const SizedBox(
-            height: 48,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () async {
-                await controller.removeToken();
-                Get.offAllNamed(AppRoutes.signIn);
+      appBar: AppBar(
+        title: const Text('My chat '),
+      ),
+      body: SafeArea(
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
+          children: [1, 2, 3, 4, 5].map((e) {
+            return ChatItem(
+              onClick: () {
+                Get.offAllNamed(AppRoutes.chat);
               },
-              child: const Text(
-                'YOU GET YOUR RENT WHEN YOU FIX THIS DAMN DOOR!',
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-        ],
+            );
+          }).toList(),
+        ),
       ),
     );
   }
