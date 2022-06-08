@@ -45,7 +45,7 @@ dependencies:
   mime: ^1.0.1
   open_file: ^3.2.1
   uuid: ^3.0.6
-  cached_network_image: ^3.2.1
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:

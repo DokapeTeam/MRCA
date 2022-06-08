@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,17 +19,43 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final dio = Dio();
   List<types.Message> _messages = [];
 
   final _user = const types.User(id: '06c33e8b-e835-4736-80f4-63f44b66666c');
-@override
+
+  @override
   void initState() {
     super.initState();
     _loadMessages();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Chats',
+          style: TextStyle(color: Colors.blue),
+        ),
+        centerTitle: true,
+        actions: const [
+          Icon(
+            Icons.local_phone,
+            color: Colors.blue,
+          ),
+          Icon(
+            Icons.videocam,
+            color: Colors.blue,
+          ),
+          Icon(
+            Icons.more_vert,
+            color: Colors.blue,
+          ),
+        ],
+        backgroundColor: Colors.white,
+        elevation: 4.0,
+      ),
       body: SafeArea(
         child: Chat(
           messages: _messages,
@@ -153,7 +180,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final index = _messages.indexWhere((element) => element.id == message.id);
     final updatedMessage = _messages[index].copyWith(previewData: previewData);
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() {
         _messages[index] = updatedMessage;
       });
@@ -173,7 +200,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void _loadMessages() async {
     final response = await rootBundle.loadString('assets/messages.json');
-    final messages = (jsonDecode(response) as List)
+    final messages = (jsonDecode(response.toString()) as List)
         .map((e) => types.Message.fromJson(e as Map<String, dynamic>))
         .toList();
 

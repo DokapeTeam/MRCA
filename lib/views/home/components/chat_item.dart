@@ -4,8 +4,17 @@ import 'package:flutter/material.dart';
 
 class ChatItem extends StatelessWidget {
   final VoidCallback? onClick;
+  final String avatar;
+  final String userName;
+  final String lastMessage;
 
-  const ChatItem({Key? key, this.onClick}) : super(key: key);
+  const ChatItem(
+      {Key? key,
+      this.onClick,
+      required this.avatar,
+      required this.userName,
+      required this.lastMessage})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +30,8 @@ class ChatItem extends StatelessWidget {
                 SizedBox(
                   width: 48,
                   child: CircleAvatar(
-                    radius: 35.0,
-                    child: Image.asset(
-                      'assets/png/avatar.png',
-                    ),
+                    radius: 30,
+                    backgroundImage: AssetImage(avatar),
                   ),
                 ),
                 const SizedBox(
@@ -33,9 +40,9 @@ class ChatItem extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Ben Nguyen',
-                      style: TextStyle(
+                    Text(
+                      userName,
+                      style: const TextStyle(
                         color: Colors.grey,
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
@@ -46,11 +53,11 @@ class ChatItem extends StatelessWidget {
                     ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.45,
-                      child: const Text(
-                        'Alo ban oi',
-                        style: TextStyle(
+                      child: Text(
+                        lastMessage,
+                        style: const TextStyle(
                           color: Colors.blueGrey,
-                          fontSize: 15.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.w600,
                         ),
                         overflow: TextOverflow.ellipsis,
@@ -63,7 +70,7 @@ class ChatItem extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text(
-                  DateTime.now().year.toString(),
+                  DateTime.now().hour.toString() + ':' + DateTime.now().minute.toString(),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
